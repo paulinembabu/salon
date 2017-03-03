@@ -1,0 +1,32 @@
+<div class = "list">
+<h1 id="texts"> Clients</h1>
+<li class="list-group-item">
+$client.getName()
+Belongs to:$stylist.getName()
+ </li>
+</div>
+
+
+
+<div class ="updateclient">
+<form action="/stylists/$client.getStylistId()/clients/$client.getId()" method="post">
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="name" input id="name" name="name" type="text">
+ 
+  </div>
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="contact" input id="contact" name="client" type="text">
+    </div>
+  
+  <button type="submit" class="btn btn-info"> Update CLIENT </button>
+</form>
+</div>
+
+<div class ="clientdelete">
+<form action="/stylists/$client.getStylistId()/clients/$client.getId()/delete" method="post">
+<button type="submit" class="btn btn-danger"> Delete CLIENT </button>
+</form>
+
+</div>

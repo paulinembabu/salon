@@ -1,0 +1,20 @@
+<div class ="lists">
+<h2 id ="texts"> ALL CLIENTS</h2>
+<table class="table table-striped">
+		<thead>
+			<tr>
+				<th class="hd"> NAME </th>
+	    		<th class ="hd"> CONTACTS</th> 
+			</tr>
+		</thead>
+		<tbody>
+			#foreach($client in $clients)
+				<tr>
+					<td class ="td"><a href ="/clients/$client.getId()">$client.getName()</a></td>
+					<td class ="td">$client.getContact()</td> 
+				</tr>
+			#end
+		</tbody>
+	</table>
+</div>
+

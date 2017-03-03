@@ -1,0 +1,15 @@
+
+<div class ="lists">
+<h2 id="texts"> STYLISTS</h2>
+#if($stylists)
+<ul class="list-group">
+#foreach($stylist in $stylists)
+  <li class="list-group-item one"><a href ="/stylists/$stylist.getId()">$stylist.getName()</a></li>
+ #end
+</ul>
+#else
+<h1> NO  stylists yet!!! </h1>
+#end 
+</div>
+
+

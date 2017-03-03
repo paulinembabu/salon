@@ -1,0 +1,25 @@
+<div class ="lists">
+<h2 id="texts">STYLISTS</h2>
+#if($stylists)
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th class="hd"> NAME </th>
+	    		<th class ="hd"> SPECIALIZATION</th> 
+			</tr>
+		</thead>
+		<tbody>
+			#foreach($stylist in $stylists)
+				<tr>
+					<td class ="td"><a href ="/stylists/$stylist.getId()">$stylist.getName()</a></td>
+					<td class ="td"> $stylist.getSpecialization()</td> 
+				</tr>
+			#end
+		</tbody>
+	</table>
+#else
+<h1> NO  stylists yet!!! </h1>
+#end 
+</div>
+
+

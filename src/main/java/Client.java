@@ -1,4 +1,4 @@
-
+ 
 import java.util.*;
 import org.sql2o.*;
 
@@ -12,7 +12,6 @@ public class Client{
 		this.contact= clientContact;
 		this.name= clientName;
 		this.stylistId = stylistId;
-		this.id = id;
 	}
 	public String getName(){
 		return name;
@@ -76,10 +75,11 @@ public class Client{
    }
  public void update(String name,String contact){
  	 try(Connection con = DB.sql2o.open()) {
- 	 	String sql ="UPDATE clients SET NAME =:name CONTACT=:contact WHERE id=:id";
+ 	 	String sql ="UPDATE clients SET name = :name, contact =:contact WHERE id = :id";
  	 	con.createQuery(sql)
  	 	.addParameter("name",name)
  	 	.addParameter("contact",contact)
+    .addParameter("id",id)
  	 	.executeUpdate();
 
  }
@@ -87,7 +87,7 @@ public class Client{
 
 public void delete(){
  try(Connection con = DB.sql2o.open()){
- String sql =  "DELETE FROM clients WHERE id:id";
+ String sql =  "DELETE FROM clients WHERE id = :id";
  con.createQuery(sql)
  .addParameter("id",id)
  .executeUpdate();

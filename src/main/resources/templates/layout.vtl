@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> salon </title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+<div class="jumbotron">
+  <div class="container">
+   <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/index"> HOME<span class="sr-only">(current)</span></a></li>
+        <li><a href="/stylists"> STYLISTS</a></li>
+        <li><a href="/clients"> CLIENTS</a></li>
+       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <p id="header"> TRENDS SALON</p>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  </div>
+</div>
+    
+      #parse( $template )
+      <div class ="lst">
+      <div class="list-group">
+  <a href="stylists/new" class="list-group-item disabled list-group-item-danger" > NEW STYLIST</a><a href="clients/new" class="list-group-item list-group-item-danger"> NEW CLIENTS</a>
+  <a href="/clients" class="list-group-item list-group-item-danger"> CLIENTS</a>
+  <a href="/stylists" class="list-group-item list-group-item-danger"> STYLISTS</a>
+</div>
+      </div>
+ 
+    </div>
+  </body>
+</html>
